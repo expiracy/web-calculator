@@ -13,9 +13,9 @@ def ui():
 @app.route("/api", methods=["POST"])
 def api():
 
-    user_inputs = int(str(request.form[""]))
+    user_inputs = request
 
-    result = Calculator.calculate(user_inputs)
+    result = Calculator.create().calculate(user_inputs)
 
     return jsonify(result=result)
 
