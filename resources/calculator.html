@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
 </head>
 <body>
@@ -8,67 +9,92 @@
             <h1>Calculator</h1>
         </tr>
 
-       <tr>
+        <tr>
             <td>
-                <input type="button" id="1" value="1" class="button"
-                       onclick="submitInput('1')"/>
+                <input type="button" id="0" value="0" class="w3-btn w3-black"
+                       onclick="submitInput('0')"/>
 
-                <input type="button" id="2" value="2" class="button"
-                       onclick="submitInput('2')"/>
+                <input type="button" id="(" value="(" class="w3-btn w3-black"
+                       onclick="submitInput('(')"/>
 
-                <input type="button" id="3" value="3" class="button"
-                       onclick="submitInput('3')"/>
+                <input type="button" id=")" value=")" class="w3-btn w3-black"
+                       onclick="submitInput(')')"/>
 
-                <input type="button" id="<" value="<" class="button"
+                <input type="button" id="<" value="<" class="w3-btn w3-black"
                        onclick="submitInput('<')"/>
             </td>
         </tr>
 
-       <tr>
+        <tr>
             <td>
-                <input type="button" id="4" value="4" class="button"
+                <input type="button" id="1" value="1" class="w3-btn w3-black"
+                       onclick="submitInput('1')"/>
+
+                <input type="button" id="2" value="2" class="w3-btn w3-black"
+                       onclick="submitInput('2')"/>
+
+                <input type="button" id="3" value="3" class="w3-btn w3-black"
+                       onclick="submitInput('3')"/>
+
+                <input type="button" id="^" value="^" class="w3-btn w3-black"
+                       onclick="submitInput('**')"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" id="4" value="4" class="w3-btn w3-black"
                        onclick="submitInput('4')"/>
 
-                <input type="button" id="5" value="5" class="button"
+                <input type="button" id="5" value="5" class="w3-btn w3-black"
                        onclick="submitInput('5')"/>
 
-                <input type="button" id="6" value="6" class="button"
+                <input type="button" id="6" value="6" class="w3-btn w3-black"
                        onclick="submitInput('6')"/>
 
-                <input type="button" id="+" value="+" class="button"
+                <input type="button" id="+" value="+" class="w3-btn w3-black"
                        onclick="submitInput('+')"/>
             </td>
         </tr>
 
-       <tr>
+        <tr>
             <td>
-                <input type="button" id="7" value="7" class="button"
+                <input type="button" id="7" value="7" class="w3-btn w3-black"
                        onclick="submitInput('7')"/>
 
-                <input type="button" id="8" value="8" class="button"
+                <input type="button" id="8" value="8" class="w3-btn w3-black"
                        onclick="submitInput('8')"/>
 
-                <input type="button" id="9" value="9" class="button"
+                <input type="button" id="9" value="9" class="w3-btn w3-black"
                        onclick="submitInput('9')"/>
 
-                <input type="button" id="-" value="-" class="button"
+                <input type="button" id="-" value="-" class="w3-btn w3-black"
                        onclick="submitInput('-')"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" id="*" value="*" class="w3-btn w3-black"
+                       onclick="submitInput('*')"/>
+
+                <input type="button" id="/" value="/" class="w3-btn w3-black"
+                       onclick="submitInput('/')"/>
+
+                <input type="button" id="//" value="//" class="w3-btn w3-black"
+                       onclick="submitInput('//')"/>
+
+                <input type="button" id="s" value="Submit" class="w3-btn w3-black"
+                       onclick="postAndResponse()"/>
             </td>
        </tr>
 
-       <tr>
-            <td>
-                <input type="button" id="*" value="*" class="button"
-                       onclick="submitInput('*')"/>
+        <tr>
+            <td><p id="calculation">Calculation:</p></td>
+        </tr>
 
-                <input type="button" id="/" value="/" class="button"
-                       onclick="submitInput('/')"/>
-
-                <input type="button" id="f" value="//" class="button"
-                       onclick="submitInput('f')"/>
-
-                <input type="button" id="s" value="Submit" class="button"
-                       onclick="postAndResponse()"/>
+        <tr>
+            <td><p id="result">Result:</p>
             </td>
         </tr>
     </table>

@@ -1,18 +1,23 @@
-var inputs = ""
+var calculation = ''
+var result = ''
 
 function submitInput(userInput) {
     if (userInput === '<') {
-        let length = inputs.length
+        let length = calculation.length
         let remove_character_index = length - 1
+
+        calculation = calculation.slice(0, remove_character_index) + calculation.slice(remove_character_index + 1);
     }
 
     else {
-        inputs = inputs + userInput
-        console.log(inputs)
+        calculation = calculation + userInput
+        console.log(calculation)
     }
+
+    outputCalculation()
 }
 
-function postAndResponse(data) {
+function postAndResponse() {
     // creating variables for ajax
     let xhr = new XMLHttpRequest();
     //let inputsJSON = {'inputs': inputs}
@@ -20,7 +25,9 @@ function postAndResponse(data) {
     // posting the values to flask
     xhr.open('post', '/api', true);
     xhr.setRequestHeader("Content-Type", "application/json")
-    xhr.send(inputs);
+    xhr.send(calculation);
+
+    calculation = ''
 
     // responses to the ajax post
     xhr.onreadystatechange = function () {
@@ -28,8 +35,16 @@ function postAndResponse(data) {
 
             // change back to global if it doesn't work
             let response = JSON.parse(xhr.responseText)
-            let result = response['result'];
-            console.log(result)
+            result = response['result'];
+            outputResult()
         }
     }
+}
+
+function outputResult() {
+    document.getElementById('result').innerText = 'Result: ' + result;
+}
+
+function outputCalculation() {
+    document.getElementById('calculation').innerText = 'Calculation: ' + calculation;
 }

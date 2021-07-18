@@ -5,9 +5,16 @@ class Calculator:
         return Calculator()
 
     def __init__(self):
-        self.result = None
+        pass
 
-    def calculate(self, inputs):
-        print(inputs)
-        print(inputs.data)
-        return str(inputs.data) + "epic"
+    def calculate(self, calculation):
+        if calculation:
+            return eval(calculation)
+
+        else:
+            return None
+
+
+
+
+
