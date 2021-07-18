@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <table border="0">
+        <tr>
+            <h1>Calculator</h1>
+        </tr>
+
+       <tr>
+            <td>
+                <input type="button" id="1" value="1" class="button"
+                       onclick="submitInput('1')"/>
+
+                <input type="button" id="2" value="2" class="button"
+                       onclick="submitInput('2')"/>
+
+                <input type="button" id="3" value="3" class="button"
+                       onclick="submitInput('3')"/>
+
+                <input type="button" id="<" value="<" class="button"
+                       onclick="submitInput('<')"/>
+            </td>
+        </tr>
+
+       <tr>
+            <td>
+                <input type="button" id="4" value="4" class="button"
+                       onclick="submitInput('4')"/>
+
+                <input type="button" id="5" value="5" class="button"
+                       onclick="submitInput('5')"/>
+
+                <input type="button" id="6" value="6" class="button"
+                       onclick="submitInput('6')"/>
+
+                <input type="button" id="+" value="+" class="button"
+                       onclick="submitInput('+')"/>
+            </td>
+        </tr>
+
+       <tr>
+            <td>
+                <input type="button" id="7" value="7" class="button"
+                       onclick="submitInput('7')"/>
+
+                <input type="button" id="8" value="8" class="button"
+                       onclick="submitInput('8')"/>
+
+                <input type="button" id="9" value="9" class="button"
+                       onclick="submitInput('9')"/>
+
+                <input type="button" id="-" value="-" class="button"
+                       onclick="submitInput('-')"/>
+            </td>
+       </tr>
+
+       <tr>
+            <td>
+                <input type="button" id="*" value="*" class="button"
+                       onclick="submitInput('*')"/>
+
+                <input type="button" id="/" value="/" class="button"
+                       onclick="submitInput('/')"/>
+
+                <input type="button" id="f" value="//" class="button"
+                       onclick="submitInput('f')"/>
+
+                <input type="button" id="s" value="Submit" class="button"
+                       onclick="postAndResponse()"/>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+<script src="static/calculator.js"></script>
+
+</html>
